@@ -1,0 +1,31 @@
+[package]
+name = "lee-interviewprep-2026"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+tokio = { version = "1", features = ["macros", "rt", "sync", "time"] }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["test-util"] }
+
+[[bin]]
+name = "interview_url_shortener"
+path = "url_shortener/interview_url_shortener.rs"
+
+[[bin]]
+name = "async_token_bucket"
+path = "rate_limiters/async_token_bucket.rs"
+
+[[bin]]
+name = "interview_distributed_cron"
+path = "distributed_cron/interview_distributed_cron.rs"
+
+[[bin]]
+name = "async_job_queue"
+path = "job_queues/async_job_queue.rs"
+
+[[bin]]
+name = "client_server_raw_tcp"
+path = "client_server/client_server_raw_tcp.rs"
