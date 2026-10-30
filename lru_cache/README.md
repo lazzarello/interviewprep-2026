@@ -6,6 +6,8 @@ A guided exercise in hash maps, doubly linked lists, and translating diagrams in
 
 **Learning goal:** reconstruct the data structure from its rules rather than memorize an implementation.
 
+*This python implementation was created over an all day (with interruptions) session with the Pi coding agent backed by GPT-sol-6.1 (high) and the most excellent [pi-socratic-tutor-mode-extension](https://github.com/memgrafter/pi-socratic-tutor-mode-extension) published by a friend.*
+
 ## 1. The real interview context
 
 This exercise came from a **30-minute live whiteboarding interview** for an infrastructure, DevOps, and cloud computing role, during a cross-functional interview round.
@@ -251,7 +253,7 @@ The current implementation inserts first, then evicts if the count is **greater 
 
 Eviction starts at the least-recent end:
 
-![Eviction at capacity two removes least-recent A from A, B, C, leaving B as start and C as end.](images/README-6.svg)
+<img src="images/README-6.svg" alt="Eviction at capacity two removes least-recent A from A, B, C, leaving B as start and C as end." width="60%" align="right">
 
 The victim's own key identifies which dictionary entry to remove. Its next reference identifies the new start. These are not necessarily the incoming key or incoming node.
 
@@ -261,6 +263,8 @@ After advancing start:
 - If no node remains, end must also become absent.
 
 Capacity 0 exercises that empty-cache path. Check whether the new start exists **before accessing any of its fields**.
+
+<br clear="all">
 
 ## 10. Session mistakes worth practicing deliberately
 
