@@ -1,0 +1,10 @@
+flowchart LR
+    subgraph Before["Capacity 2, after inserting C"]
+        direction TB
+        A1["A: victim"] --> B1["B"] --> C1["C: newest"]
+    end
+    subgraph After["After eviction"]
+        direction TB
+        B2["B: start"] --> C2["C: end"]
+    end
+    Before -->|Evict A| After
