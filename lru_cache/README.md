@@ -253,7 +253,7 @@ The current implementation inserts first, then evicts if the count is **greater 
 
 Eviction starts at the least-recent end:
 
-<img src="images/README-6.svg" alt="Eviction at capacity two removes least-recent A from A, B, C, leaving B as start and C as end." width="60%" align="right">
+<img src="images/README-6.svg" alt="Eviction at capacity two removes least-recent A from A, B, C, leaving B as start and C as end." width="50%" height="50%" align="right">
 
 The victim's own key identifies which dictionary entry to remove. Its next reference identifies the new start. These are not necessarily the incoming key or incoming node.
 
