@@ -1,4 +1,8 @@
-/target/
+# Rust build artifacts (including nested crates)
+target/
+
+# Python bytecode caches
+__pycache__/
 
 # Devenv
 .devenv*
