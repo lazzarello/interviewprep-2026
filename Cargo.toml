@@ -29,3 +29,7 @@ path = "job_queues/async_job_queue.rs"
 [[bin]]
 name = "client_server_raw_tcp"
 path = "client_server/client_server_raw_tcp.rs"
+
+[[bin]]
+name = "count_elements_greater"
+path = "hackerrank/count-elements-greater-than-previous.rs"
