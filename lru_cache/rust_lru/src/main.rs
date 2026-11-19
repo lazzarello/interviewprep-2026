@@ -45,3 +45,28 @@ fn main() {
     cache.put("C".to_string(), 30);
     println!("{:?}", cache.entries);
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn reading_a_refreshes_its_recency() {
+        let mut cache = Cache {
+            capacity: 2,
+            counter: 0,
+            entries: HashMap::new(),
+        };
+
+        cache.put("A".to_string(), 10);
+        cache.put("B".to_string(), 20);
+
+        assert_eq!(cache.get("A".to_string()), Some(10));
+
+        cache.put("C".to_string(), 30);
+
+        assert_eq!(cache.get("B".to_string()), None);
+        assert_eq!(cache.get("A".to_string()), Some(10));
+        assert_eq!(cache.get("C".to_string()), Some(30));
+    }
+}
