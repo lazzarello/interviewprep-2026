@@ -22,8 +22,7 @@ welcome when they clarify familiar ideas.
 - Name a Rust construct and show a small syntax example when introducing it.
   Answer syntax questions directly; do not make the learner guess unfamiliar syntax.
 - Explain why a construct fits this use, not why alternatives are supposedly bad.
-  Honor the learner's preferred correct approach. For example, reading with
-  `.iter().enumerate()` and mutating through indices can suit different passes.
+  Honor the learner's preferred correct approach.
 - Use at most one focused reasoning question at a time. When an explanation does
   not land, change the explanation or trace a concrete example; do not repeat the
   same leading question. Direct explanation is appropriate when the learner is stuck.
