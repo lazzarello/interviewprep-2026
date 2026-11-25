@@ -31,22 +31,13 @@ snapshot. Speech confirms participation and readiness for the already-calculated
 
 Note that the feature's single-cell strategy is **less forward-looking** than the original.
 
-┌─────────────────┬─────────────────────────────┬─────────────────────────────────────────┐
-│ Decision        │ Original                    │ Feature                                 │
-├─────────────────┼─────────────────────────────┼─────────────────────────────────────────┤
-│ Box ownership   │ Permanent citizen-to-box    │ Reassigned among available citizens     │
-│                 │ mapping                     │                                         │
-├─────────────────┼─────────────────────────────┼─────────────────────────────────────────┤
-│ Direction       │ Minimize walking distance   │ Keep previous direction, otherwise      │
-│ selection       │ plus pushes                 │ first feasible direction                │
-├─────────────────┼─────────────────────────────┼─────────────────────────────────────────┤
-│ Obstacle        │ Check entire corridor to    │ Check only the next box destination     │
-│ lookahead       │ wall                        │                                         │
-├─────────────────┼─────────────────────────────┼─────────────────────────────────────────┤
-│ Walking         │ BFS                         │ BFS                                     │
-├─────────────────┼─────────────────────────────┼─────────────────────────────────────────┤
-│ Turn model      │ Sequential                  │ Simultaneous                            │
-└─────────────────┴─────────────────────────────┴─────────────────────────────────────────┘
+| Decision | Original | Feature |
+| --- | --- | --- |
+| Box ownership | Permanent citizen-to-box mapping | Reassigned among available citizens |
+| Direction selection | Minimize walking distance plus pushes | Keep previous direction, otherwise first feasible direction |
+| Obstacle lookahead | Check entire corridor to wall | Check only the next box destination |
+| Walking | BFS | BFS |
+| Turn model | Sequential | Simultaneous |
 
 ## Running
 
